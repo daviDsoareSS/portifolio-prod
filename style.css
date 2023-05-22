@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Consolas';
+  src: url('/fonts/CONSOLA.TTF') format('truetype'), /* Formato WOFF2 */
+       url('/fonts/CONSOLAB.TTF') format('truetype'), /* Formato WOFF2 */
+       url('/fonts/consolai.ttf') format('truetype'), /* Formato WOFF */
+       url('/fonts/Consolas.ttf') format('truetype'), /* Formato WOFF */
+       url('/fonts/consolaz.ttf') format('truetype'); /* Formato WOFF */
+}
+:root{
+  --background-dark: #181818;
+  --background-gray: #1f1f1f;
+  --color-border: #292929;
+  --color-border-select: #0082e8;
+}
+
+body{
+  font-family: Calibri;
+  background-color: var(--background-gray);
+  color: white;
+}
+header{
+  margin-left: 70px;
+  background-color: var(--background-dark);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-left: none;
+  display: block;
+  position: sticky;
+}
+header ul{
+  position: relative;
+  list-style: none;
+  display: flex;  
+}
+header ul a{
+  text-decoration: none;
+  color: white;
+}
+header ul li{
+  padding: 10px 50px;
+}
+header ul li img{
+  margin-right: 5px;
+  width: 18px;
+}
+header ul li.selected-tab{
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+  border-top: 2px solid var(--color-border-select);
+  background-color: var(--background-gray);
+}
+header ul li.selected-tab::before{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 10px;
+  width: 192px;
+  left: 0;
+  background-color: var(--background-gray);
+}
+.sidebar{
+  background-color:  var(--background-dark);
+  position: fixed;
+  width: 70px;
+  height: 100vh;
+  border: 1px solid var(--color-border);
+  border-left: none;
+}
+.sidebar ul{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: left;
+  list-style: none;
+  color: white;
+  font-weight: bolder;
+  gap: 0px;
+}
+.sidebar ul li svg{
+  width: 30px !important;
+  fill: white;
+}
+.sidebar ul li{
+  padding: 20px;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+.sidebar ul li.selected{
+  border-left: 2px solid var(--color-border-select);
+}
+main .content-main{
+  margin-left: 8rem;
+  margin-right: 3rem;
+  margin-top: 5rem;
+  font-family: 'Consolas';
+  
+}
+main .content-main.home{
+  margin-left: 8rem;
+  margin-right: 3rem;
+  margin-top: 15rem;
+  font-family: 'Consolas';
+  
+}
+main .content-main h3{
+  font-weight: 400;
+  border-left: 1px solid gray;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+main .content-main h4{
+  font-weight: 400;
+  padding-left: 20px;
+  margin-left: 32px;
+  border-left: 1px solid gray;
+}
+main .content-main p{
+  font-weight: 400;
+  padding-left: 40px;
+  border-left: 1px solid gray;
+  margin-left: 55px;
+}
+main .content-main h3 strong,
+main .content-main h4 strong,
+main .content-main p a{
+  font-weight: 400;
+  color: #bf8d6f;
+}
+span{
+  color: #2e68c3;
+}
+main section.projects{
+  margin: 0 auto;
+  max-width: 600px;
+  column-count: 3;
+}
+main section.projects .card{
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(50, 50, 90, .1);
+}
+main section.projects .card p{
+  padding-left: 0;
+  margin: 0;
+}
+main section.projects img{
+  display: block;
+  max-width: 100%;
+}
